@@ -1,0 +1,9 @@
+@import url('./fonts.css');
+
+:root {
+    --primary-bg-color: #F3EFE4;
+    --secondary-bg-color: #D6D3C9;
+
+    --primary-text-color: #000000;
+    --secondary-text-color: #000000;
+}
