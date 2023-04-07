@@ -1,3 +1,9 @@
+@import url("./fonts.css");
+
+:root {
+    --primary-bg-color: #F3EFE4;
+}
+
 .header {
     position: absolute;
     width: 100%;
@@ -5,11 +11,12 @@
     left: 0px;
     top: 0px;
 
-    background: #F3EFE4;
+    background: var(--primary-bg-color);
 }
 
 body {
-    background: #F3EFE4;
+    background: var(--primary-bg-color);
+    font-family: "OpenDyslexic";
 }
 
 .logo {
@@ -35,7 +42,6 @@ body {
     left: 0px;
     top: 0px;
 
-    font-family: 'OpenDyslexic';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
