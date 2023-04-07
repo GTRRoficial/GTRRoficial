@@ -3,6 +3,8 @@
 /* 
     Guia de pesquisa
     FAQ -> Estilização específica da página faq.html
+    Animations
+        FadeIn
  */
 
 :root {
@@ -124,12 +126,25 @@ div[class='ask-container'] {
 
 .answer {
     display: none;
-    transform: scale(0);
     padding-left: 1.125rem;
     padding-right: 1.125rem;
 
-    transition: transform 0.3s;
     text-align: justify;
+
+    animation: fadeIn 0.2s;
+    -webkit-animation: fadeIn 0.2s;
+    -moz-animation: fadeIn 0.2s;
+    -o-animation: fadeIn 0.2s;
+    -ms-animation: fadeIn 0.2s;
+}
+
+.ask-container:first-child > .answer,
+.ask-container:last-child > .answer {
+    animation: scaleIn 0.2s;
+    -webkit-animation: scaleIn 0.2s;
+    -moz-animation: scaleIn 0.2s;
+    -o-animation: scaleIn 0.2s;
+    -ms-animation: scaleIn 0.2s;
 }
 
 article[class='content faq'] {
@@ -146,6 +161,106 @@ article[class='content faq'] > hr {
     height: 2rem;
     transform: rotate(0deg);
 
-    transition: transform 0.3s;
+    transition: transform 0.2s;
+}
+
+.answer > img {
+    width: 40vw;
+    height: 40vw;
+    margin-left: 25%;
 }
 /* End FAQ */
+
+/* Animations */
+/* FadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* End FadeIn */
+
+@keyframes scaleIn {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@-moz-keyframes scaleIn {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@-webkit-keyframes scaleIn {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@-o-keyframes scaleIn {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@-ms-keyframes scaleIn {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+/* End Animations */

@@ -10,14 +10,14 @@
                 resp?.style.setProperty('display', 'block');
                 setTimeout(() => {
                     resp?.style.setProperty("transform", "scale(1)");
-                }, 200)
+                }, 0)
                 img?.style.setProperty("transform", "rotate(90deg)");
             } else {
-                resp?.style.setProperty("transform", "scale(0)");
+                resp?.style.setProperty("transform", "scale(1)");
                 img?.style.setProperty("transform", "rotate(0deg)");
                 setTimeout(() => {
                     resp?.style.setProperty('display', 'none');
-                }, 200)
+                }, 100)
             }
         })
     }
