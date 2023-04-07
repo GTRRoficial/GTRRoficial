@@ -108,7 +108,6 @@ div[class='ask-container'] {
 .ask {
     display: flex;
     align-items: center;
-    text-align: justify;
     column-gap: 0.91rem;
     margin-bottom: 2.75rem;
 }
@@ -119,6 +118,11 @@ div[class='ask-container'] {
     padding-left: 1.625rem;
 
     transition: transform 0.5s;
+    text-align: justify;
+}
+
+.ask-container {
+    width: 90.375rem;
 }
 
 .ask-container > p > a {
@@ -127,7 +131,7 @@ div[class='ask-container'] {
 }
 
 article[class='content faq'] {
-    padding: 1rem 12.813rem;
+    margin: 1rem 12.813rem;
 }
 
 article[class='content faq'] > hr {
