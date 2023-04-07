@@ -138,8 +138,7 @@ div[class='ask-container'] {
     -ms-animation: fadeIn 0.2s;
 }
 
-.ask-container:first-child > .answer,
-.ask-container:last-child > .answer {
+.ask-container:nth-last-of-type(2n) > .answer {
     animation: scaleIn 0.2s;
     -webkit-animation: scaleIn 0.2s;
     -moz-animation: scaleIn 0.2s;
