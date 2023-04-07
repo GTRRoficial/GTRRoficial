@@ -45,6 +45,15 @@ h2 {
     line-height: 132.5%;
 }
 
+a {
+    text-decoration: none;
+    color: #ff1100;
+}
+
+a:hover {
+    color: #a90b00;
+}
+
 .logo {
     width: 6.563rem;
     height: 3.438rem;
@@ -110,6 +119,7 @@ div[class='ask-container'] {
     align-items: center;
     column-gap: 0.91rem;
     margin-bottom: 2.75rem;
+    cursor: pointer;
 }
 
 .answer {
@@ -121,16 +131,8 @@ div[class='ask-container'] {
     text-align: justify;
 }
 
-.ask-container {
-    width: 90.375rem;
-}
-
-.ask-container > p > a {
-    text-decoration: none;
-    color: blue;
-}
-
 article[class='content faq'] {
+    width: 70vw;
     margin: 1rem 12.813rem;
 }
 
