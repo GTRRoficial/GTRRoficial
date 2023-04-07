@@ -1,68 +1,144 @@
-@import url("./fonts.css");
+@import url('./fonts.css');
+
+/* 
+    Guia de pesquisa
+    FAQ -> Estilização específica da página faq.html
+ */
 
 :root {
-    --primary-bg-color: #F3EFE4;
-}
+    --bg-primary-color: #f3efe4;
+    --bg-secondary-color: #dfdcd3;
 
-.header {
-    position: absolute;
-    width: 100%;
-    height: 93px;
-    left: 0px;
-    top: 0px;
-
-    background: var(--primary-bg-color);
+    --text-primary-color: #000;
 }
 
 body {
-    background: var(--primary-bg-color);
-    font-family: "OpenDyslexic";
+    background: var(--bg-primary-color);
+
+    font-family: 'OpenDyslexic';
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.18rem;
+    line-height: 1.625rem;
+    font-weight: 700;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132.5%;
+}
+
+h1 {
+    font-family: 'Molot';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.75rem;
+    line-height: 2.375rem;
+    letter-spacing: 0.075em;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 132.5%;
 }
 
 .logo {
-    position: absolute;
-    width: 105px;
-    height: 55px;
-    left: 100px;
-    top: 22px;
+    width: 6.563rem;
+    height: 3.438rem;
+    left: 6.25rem;
+    top: 1.375rem;
 }
 
 .menu {
-    position: absolute;
     width: 100%;
-    height: 22px;
+    height: 1.375rem;
     left: 242px;
     top: 45px;
 }
 
 .botao-menu {
-    position: absolute;
-    width: 53px;
-    height: 22px;
-    left: 0px;
-    top: 0px;
-
     font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 26px;
     text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-primary-color);
 
-    color: #000000;
+    margin-left: 1.375rem;
+}
+
+.header {
+    height: 5.813rem;
+}
+
+.header,
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .footer {
-    position: absolute;
-    width: 100%;
-    height: 317px;
-    left: -1px;
-    top: 2616px;
+    width: 100vw;
+    margin-top: 1rem;
+
+    background-color: var(--bg-secondary-color);
+    padding: 2.125rem 0px;
 }
 
 .footer-logo {
-    position: absolute;
-    width: 246px;
-    height: 129px;
-    left: 139px;
-    top: 42px;
+    width: 15.375rem;
+    height: 8.063rem;
+    background-image: url('../assets/icons/footer_logo.png');
 }
+
+/* FAQ */
+.h1-faq {
+    width: 87.5%;
+    text-align: left;
+    padding: 4rem 0px 3.375rem 15.125rem;
+    background-color: var(--bg-secondary-color);
+}
+
+div[class='ask-container'] {
+    padding: 3.125rem 0px;
+}
+
+.ask {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    column-gap: 0.91rem;
+    margin-bottom: 2.75rem;
+}
+
+.answer {
+    display: none;
+    transform: scale(0);
+    padding-left: 1.625rem;
+
+    transition: transform 0.5s;
+}
+
+.ask-container > p > a {
+    text-decoration: none;
+    color: blue;
+}
+
+article[class='content faq'] {
+    padding: 1rem 12.813rem;
+}
+
+article[class='content faq'] > hr {
+    border: 0.125rem solid var(--text-primary-color);
+}
+
+.ask > img {
+    width: 2rem;
+    height: 2rem;
+    transform: rotate(0deg);
+
+    transition: transform 0.5s;
+}
+/* End FAQ */
