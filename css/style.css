@@ -138,14 +138,6 @@ div[class='ask-container'] {
     -ms-animation: fadeIn 0.2s;
 }
 
-.ask-container:nth-last-of-type(2n) > .answer {
-    animation: scaleIn 0.2s;
-    -webkit-animation: scaleIn 0.2s;
-    -moz-animation: scaleIn 0.2s;
-    -o-animation: scaleIn 0.2s;
-    -ms-animation: scaleIn 0.2s;
-}
-
 article[class='content faq'] {
     width: 70vw;
     margin: 1rem 12.813rem;
@@ -218,48 +210,4 @@ article[class='content faq'] > hr {
 }
 /* End FadeIn */
 
-@keyframes scaleIn {
-    0% {
-        scale: 0;
-    }
-    100% {
-        scale: 1;
-    }
-}
-
-@-moz-keyframes scaleIn {
-    0% {
-        scale: 0;
-    }
-    100% {
-        scale: 1;
-    }
-}
-
-@-webkit-keyframes scaleIn {
-    0% {
-        scale: 0;
-    }
-    100% {
-        scale: 1;
-    }
-}
-
-@-o-keyframes scaleIn {
-    0% {
-        scale: 0;
-    }
-    100% {
-        scale: 1;
-    }
-}
-
-@-ms-keyframes scaleIn {
-    0% {
-        scale: 0;
-    }
-    100% {
-        scale: 1;
-    }
-}
 /* End Animations */
