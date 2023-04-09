@@ -2,6 +2,8 @@
 
 /* 
     Guia de pesquisa
+    Header
+    Footer
     FAQ -> Estilização específica da página faq.html
     Animations
         FadeIn
@@ -59,6 +61,7 @@ a:hover {
     color: var(--link-hover-color);
 }
 
+/* Header */
 .logo {
     width: 6.563rem;
     height: 3.438rem;
@@ -135,6 +138,7 @@ a:hover {
 
 .header {
     height: 5.813rem;
+    margin-bottom: 1rem;
 }
 
 .header,
@@ -142,14 +146,36 @@ a:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100vw;
 }
 
+.header > :first-child {
+    margin-left: 5vw;
+}
+
+.header > :last-child {
+    margin-right: 5vw;
+}
+/* End Header */
+
+/* Footer */
 .footer {
-    width: 100vw;
     margin-top: 1rem;
 
     background-color: var(--bg-secondary-color);
-    padding: 2.125rem 0px;
+    padding: 2.125rem 0rem;
+    display: flex;
+
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.footer > div:first-child {
+    margin-left: 10vw;
+}
+
+.footer > div:last-child {
+    margin-right: 10vw;
 }
 
 .footer-logo {
@@ -158,11 +184,43 @@ a:hover {
     background-image: url('../assets/icons/footer_logo.png');
 }
 
+.footer > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.8rem;
+}
+
+.footer > div > a {
+    color: var(--text-primary-color);
+}
+
+.footer > div > a:hover {
+    color: var(--link-hover-color);
+}
+
+.social-medias {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .social-medias > a > img {
+    width: 3rem;
+    height: 3rem;
+}
+/* End Footer */
+
 .page-title {
-    width: 87.5%;
+    width: 100%;
     text-align: left;
-    padding: 4rem 0px 3.375rem 17vw;
+    padding: 4rem 0px 3.375rem 0rem;
     background-color: var(--bg-secondary-color);
+}
+
+.page-title > h1:first-child {
+    margin-left: 15vw;
 }
 
 /* FAQ */
