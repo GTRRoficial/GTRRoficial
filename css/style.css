@@ -104,14 +104,14 @@ a:hover {
     background-image: url('../assets/icons/footer_logo.png');
 }
 
-/* FAQ */
-.h1-faq {
+.page-title {
     width: 87.5%;
     text-align: left;
     padding: 4rem 0px 3.375rem 17vw;
     background-color: var(--bg-secondary-color);
 }
 
+/* FAQ */
 div[class='ask-container'] {
     padding: 0.5rem 0px;
 }
