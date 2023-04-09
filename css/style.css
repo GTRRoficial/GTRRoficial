@@ -12,6 +12,9 @@
     --bg-secondary-color: #dfdcd3;
 
     --text-primary-color: #000;
+
+    --link-primary-color: #ff1100;
+    --link-hover-color: #a90b00;
 }
 
 body {
@@ -49,11 +52,11 @@ h2 {
 
 a {
     text-decoration: none;
-    color: #ff1100;
+    color: var(--link-primary-color);
 }
 
 a:hover {
-    color: #a90b00;
+    color: var(--link-hover-color);
 }
 
 .logo {
@@ -70,13 +73,64 @@ a:hover {
     top: 45px;
 }
 
-.botao-menu {
+.menu ul li {
+    list-style: none;
+}
+
+.menu > ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    column-gap: 1.375rem;
+}
+
+.menu > ul > li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+    position: relative;
+}
+
+.menu > ul .botao-menu {
     font-style: normal;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--text-primary-color);
+}
 
-    margin-left: 1.375rem;
+.menu > ul .botao-menu:hover {
+    color: var(--link-hover-color);
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    text-align: center;
+
+    z-index: 1;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 1.5rem;
+
+    background-color: var(--bg-primary-color);
+}
+
+.sub-menu > li {
+    margin: 1rem 0rem;
+}
+
+.menu ul li:hover ul {
+    display: block;
+}
+
+.sub-menu > li > a {
+    width: 100%;
+}
+
+.sub-menu .botao-menu {
+    margin: 0px;
 }
 
 .header {

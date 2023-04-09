@@ -7,10 +7,22 @@ window.onload = () => {
     setTimeout(() => {
         const pages = {
             index: "home",
-            faq: "faq"
+            about: "about",
+            "primeiros%20passos": "first-steps",
+            faq: "faq",
+            curadoria: "curadoria",
+            manifesto: "manifesto",
+            estatuto: "estatuto",
+            projetos: "projetos",
+            "projetos%20em%20andamento": "andamento",
+            "projetos%20finalizados": "finalizado",
+            membros: "membros",
+            camaradas: "camaradas"
         }
         const actualPage = document.head.baseURI.split('/').pop()?.split('.')[0];
-        const element = document.querySelector(`[${pages[actualPage || "index"]}]`);
-        element?.setAttribute("style", "border-bottom: 0.2rem solid #000;");
+        const element = document.querySelectorAll(`[${pages[actualPage || "index"]}]`);
+        element.forEach(elem => {
+            elem?.setAttribute("style", "border-bottom: 0.2rem solid #000;");
+        })
     }, 500)
 }
