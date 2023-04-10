@@ -35,6 +35,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 132.5%;
+    text-align: justify;
 }
 
 h1 {
@@ -59,6 +60,28 @@ a {
 
 a:hover {
     color: var(--link-hover-color);
+}
+
+.page-title {
+    width: 100%;
+    text-align: left;
+    padding: 4rem 0px 3.375rem 0rem;
+    background-color: var(--bg-secondary-color);
+}
+
+.page-title > h1:first-child {
+    margin-left: 14.5vw;
+}
+
+.content {
+    width: 70vw;
+    margin: 1rem 15vw;
+}
+
+div[class='content curadoria'] {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* Header */
@@ -213,17 +236,6 @@ a:hover {
 }
 /* End Footer */
 
-.page-title {
-    width: 100%;
-    text-align: left;
-    padding: 4rem 0px 3.375rem 0rem;
-    background-color: var(--bg-secondary-color);
-}
-
-.page-title > h1:first-child {
-    margin-left: 15vw;
-}
-
 /* FAQ */
 div[class='ask-container'] {
     padding: 0.5rem 0px;
@@ -249,11 +261,6 @@ div[class='ask-container'] {
     -moz-animation: fadeIn 0.2s;
     -o-animation: fadeIn 0.2s;
     -ms-animation: fadeIn 0.2s;
-}
-
-article[class='content faq'] {
-    width: 70vw;
-    margin: 1rem 12.813rem;
 }
 
 article[class='content faq'] > hr {
