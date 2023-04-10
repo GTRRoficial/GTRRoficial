@@ -108,16 +108,17 @@ a:hover {
 }
 
 .sub-menu {
-    display: none;
+    display: block;
     position: absolute;
     text-align: center;
 
     z-index: 1;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    margin-top: 1.5rem;
+    margin-top: 1.7rem;
 
     background-color: var(--bg-primary-color);
+    box-shadow: 0.3rem 0.2rem 0.3rem var(--link-hover-color);
 }
 
 .sub-menu > li {
@@ -150,11 +151,11 @@ a:hover {
 }
 
 .header > :first-child {
-    margin-left: 5vw;
+    margin-left: 10vw;
 }
 
 .header > :last-child {
-    margin-right: 5vw;
+    margin-right: 10vw;
 }
 /* End Header */
 
