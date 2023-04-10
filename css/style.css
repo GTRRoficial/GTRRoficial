@@ -108,7 +108,7 @@ a:hover {
 }
 
 .sub-menu {
-    display: block;
+    display: none;
     position: absolute;
     text-align: center;
 
