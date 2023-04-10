@@ -5,6 +5,8 @@
     Header
     Footer
     FAQ -> Estilização específica da página faq.html
+    Align-Width
+    Mobile
     Animations
         FadeIn
  */
@@ -24,12 +26,12 @@ body {
 
     font-family: 'OpenDyslexic';
 
+    width: 100vw;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    font-size: 1.18rem;
+    font-size: 0.9rem;
     line-height: 1.625rem;
     font-weight: 700;
     font-style: normal;
@@ -76,9 +78,6 @@ a:hover {
 .content {
     width: 70vw;
     margin: 1rem 15vw;
-}
-
-div[class='content curadoria'] {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -88,30 +87,24 @@ div[class='content curadoria'] {
 .logo {
     width: 6.563rem;
     height: 3.438rem;
-    left: 6.25rem;
-    top: 1.375rem;
 }
 
 .menu {
     width: 100%;
-    height: 1.375rem;
-    left: 242px;
-    top: 45px;
-}
+    text-align: left;
 
-.menu ul li {
-    list-style: none;
-}
-
-.menu > ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
-    column-gap: 1.375rem;
+    column-gap: 1rem;
 }
 
-.menu > ul > li {
+.menu li {
+    list-style: none;
+}
+
+.menu > li {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -119,14 +112,14 @@ div[class='content curadoria'] {
     position: relative;
 }
 
-.menu > ul .botao-menu {
+.menu .botao-menu {
     font-style: normal;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--text-primary-color);
 }
 
-.menu > ul .botao-menu:hover {
+.menu .botao-menu:hover {
     color: var(--link-hover-color);
 }
 
@@ -138,17 +131,17 @@ div[class='content curadoria'] {
     z-index: 1;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    margin-top: 1.7rem;
+    margin-top: 1.5rem;
 
     background-color: var(--bg-primary-color);
-    box-shadow: 0.3rem 0.2rem 0.3rem var(--link-hover-color);
+    box-shadow: 0.1rem 0.1rem 0.08rem var(--link-hover-color);
 }
 
 .sub-menu > li {
     margin: 1rem 0rem;
 }
 
-.menu ul li:hover ul {
+.menu li:hover ul {
     display: block;
 }
 
@@ -161,7 +154,6 @@ div[class='content curadoria'] {
 }
 
 .header {
-    height: 5.813rem;
     margin-bottom: 1rem;
 }
 
@@ -170,7 +162,7 @@ div[class='content curadoria'] {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100vw;
+    position: relative;
 }
 
 .header > :first-child {
@@ -187,19 +179,12 @@ div[class='content curadoria'] {
     margin-top: 1rem;
 
     background-color: var(--bg-secondary-color);
-    padding: 2.125rem 0rem;
+    padding: 2.125rem 2vw;
     display: flex;
+    column-gap: 1rem;
 
     text-transform: uppercase;
     text-decoration: none;
-}
-
-.footer > div:first-child {
-    margin-left: 10vw;
-}
-
-.footer > div:last-child {
-    margin-right: 10vw;
 }
 
 .footer-logo {
@@ -237,6 +222,12 @@ div[class='content curadoria'] {
 /* End Footer */
 
 /* FAQ */
+article[class='content faq'] {
+    width: 70vw;
+    margin: 1rem 15vw;
+    display: block;
+}
+
 div[class='ask-container'] {
     padding: 0.5rem 0px;
 }
@@ -281,6 +272,67 @@ article[class='content faq'] > hr {
     margin-left: 25%;
 }
 /* End FAQ */
+
+#toggle-menu {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    user-select: none;
+
+    transition: transform 0.2s;
+}
+
+/* Align-Width */
+@media (max-width: 1270px) {
+    .footer > :not(:first-child) {
+        align-items: start;
+        text-align: left;
+    }
+}
+/* End Align-Width */
+
+/* Mobile */
+@media (max-width: 1024px) {
+    .hamburger {
+        display: block;
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .header > .menu {
+        display: none;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 10vw;
+
+        padding: 0.5rem;
+        border: 0.1rem solid var(--link-hover-color);
+        border-radius: 0.4rem;
+    }
+
+    .header > .menu .sub-menu {
+        margin-top: 0rem;
+        left: 60%;
+        transform: translateX(35%);
+    }
+
+    #toggle-menu:checked ~ .menu {
+        display: flex;
+        flex-direction: column;
+        align-self: self-end;
+        row-gap: 0.8rem;
+    }
+    #toggle-menu:checked ~ .hamburger {
+        transform: rotate(90deg);
+    }
+}
+/* End Mobile */
 
 /* Animations */
 /* FadeIn */
