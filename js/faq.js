@@ -7,7 +7,7 @@
 
         title?.addEventListener('click', () => {
             if (resp?.style.display == '' || resp?.style.display == 'none') {
-                resp?.style.setProperty('display', 'block');
+                resp?.style.setProperty('display', 'flex');
                 setTimeout(() => {
                     resp?.style.setProperty("transform", "scale(1)");
                 }, 0)

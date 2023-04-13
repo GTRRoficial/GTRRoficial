@@ -263,6 +263,16 @@ div[class='ask-container'] {
     -moz-animation: fadeIn 0.2s;
     -o-animation: fadeIn 0.2s;
     -ms-animation: fadeIn 0.2s;
+
+    flex-direction: column;
+}
+
+.answer > span {
+    align-self: flex-start;
+}
+
+.answer > :not(:first-child) {
+    margin-top: 1rem;
 }
 
 article[class='content faq'] > hr {
