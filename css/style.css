@@ -26,7 +26,7 @@ body {
 
     font-family: 'OpenDyslexic';
 
-    width: 100vw;
+    margin: 0;
 
     display: flex;
     flex-direction: column;
@@ -107,6 +107,7 @@ a:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-left: 1rem;
 
     column-gap: 1rem;
 }
@@ -123,14 +124,14 @@ a:hover {
     position: relative;
 }
 
-.menu .botao-menu {
+.botao-menu {
     font-style: normal;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--text-primary-color);
 }
 
-.menu .botao-menu:hover {
+.botao-menu:hover {
     color: var(--link-hover-color);
 }
 
@@ -152,8 +153,12 @@ a:hover {
     margin: 1rem 0rem;
 }
 
-.menu li:hover ul {
+.header li:hover ul {
     display: block;
+}
+
+.header li {
+    list-style: none;
 }
 
 .sub-menu > li > a {
@@ -164,8 +169,63 @@ a:hover {
     margin: 0px;
 }
 
+#toggle-menu {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    user-select: none;
+    z-index: 5;
+
+    transition: transform 0.2s;
+}
+
+.menu-mobile {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+
+    z-index: 2;
+    background-color: #000000a9;
+    top: 0;
+}
+
+.header > :last-child {
+    background-color: var(--bg-primary-color);
+
+    position: fixed;
+    width: 25vw;
+    height: 100vh;
+    border-radius: 2%;
+    padding: 5rem 3rem 0 3rem;
+
+    text-align: right;
+
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.header > :last-child > li {
+    margin: 0 0 2rem 0;
+}
+
+.header > :last-child > li:hover ul {
+    display: block;
+}
+
+.header > :last-child > li > ul {
+    display: none;
+    margin-top: 1rem;
+    right: 0;
+    margin-right: 5rem;
+}
+
 .header {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 1.125rem 5vw;
 }
 
 .header,
@@ -174,14 +234,6 @@ a:hover {
     justify-content: space-around;
     align-items: center;
     position: relative;
-}
-
-.header > :first-child {
-    margin-left: 10vw;
-}
-
-.header > :last-child {
-    margin-right: 10vw;
 }
 /* End Header */
 
@@ -226,9 +278,17 @@ a:hover {
     justify-content: space-between;
 }
 
+.social-medias > :last-child {
+    margin-right: 0.55vw;
+}
+
 .footer .social-medias > a > img {
     width: 3rem;
     height: 3rem;
+}
+.footer .social-medias > :nth-child(2) > img {
+    width: 2.7rem;
+    height: 2.7rem;
 }
 /* End Footer */
 
@@ -291,21 +351,10 @@ article[class='content faq'] > hr {
     margin-left: 25%;
 }
 /* End FAQ */
+
 .img-rice {
     width: 40vw;
     height: 40vw;
-}
-
-#toggle-menu {
-    display: none;
-}
-
-.hamburger {
-    display: none;
-    font-size: 2rem;
-    user-select: none;
-
-    transition: transform 0.2s;
 }
 
 /* Align-Width */
@@ -329,30 +378,23 @@ article[class='content faq'] > hr {
 
     .header > .menu {
         display: none;
-        position: relative;
-        width: 100%;
-        text-align: center;
-        margin: 0.5rem 10vw;
-
-        padding: 0.5rem;
-        border: 0.1rem solid var(--link-hover-color);
-        border-radius: 0.4rem;
     }
 
-    .header > .menu .sub-menu {
-        margin-top: 0rem;
-        left: 60%;
-        transform: translateX(35%);
+    .footer > :first-child {
+        grid-area: logo-footer;
     }
 
-    #toggle-menu:checked ~ .menu {
-        display: flex;
-        flex-direction: column;
-        align-self: self-end;
-        row-gap: 0.8rem;
+    .footer {
+        display: grid;
+
+        grid-template-areas:
+            'logo-footer .'
+            'logo-footer .'
+            'logo-footer .';
     }
-    #toggle-menu:checked ~ .hamburger {
-        transform: rotate(90deg);
+
+    .footer > :not(:first-child) {
+        margin-bottom: 1rem;
     }
 }
 /* End Mobile */
