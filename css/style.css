@@ -96,7 +96,7 @@ a:hover {
 }
 
 /* Header */
-.logo {
+.logo > img {
     width: 6.563rem;
     height: 3.438rem;
 }
@@ -387,6 +387,7 @@ article[class='content faq'] > hr {
         position: fixed;
         background-color: var(--bg-primary-color);
         width: 100%;
+        height: 4vh;
         z-index: 1;
 
         box-shadow: 0 0.1rem 0.2rem var(--link-hover-color);
@@ -398,6 +399,16 @@ article[class='content faq'] > hr {
 
     .header > .menu {
         display: none;
+    }
+
+    .logo > img {
+        top: 0;
+        width: 10rem;
+        height: 5rem;
+    }
+
+    .sub-menu > :nth-child(2n) {
+        margin-top: 1.8rem;
     }
 
     .footer > :first-child {
