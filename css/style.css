@@ -249,6 +249,11 @@ a:hover {
 /* End Header */
 
 /*home*/
+
+.height-space {
+    margin-top:35px;
+}
+
 .principal-logo {
     margin: 100px;
 }
@@ -263,7 +268,6 @@ a:hover {
 }
 
 .button {
-    margin: 15px;
     border: 3px solid #000000;
     width: 249px;
     height: 39px;
@@ -282,10 +286,12 @@ a:hover {
     margin-left:50px;
 }
 
+.fade-in-image { animation: fadeIn 1s; }
+
 .home-faq {
     width: 100%;
     text-align: center;
-    padding: 4rem 0px 3.375rem 0px;
+    padding: 4rem 0px 50px 0px;
     background-color: var(--bg-secondary-color);
 }
 
@@ -296,7 +302,7 @@ a:hover {
     background: #D6D3C9;
     border: 3px solid #000000;
     border-radius: 5px;
-    padding: 20px;
+    padding: 0px 20px 0px 20px;
     margin-left:25%
 }
 
