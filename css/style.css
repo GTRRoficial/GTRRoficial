@@ -146,9 +146,10 @@ a:hover {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     margin-top: 1.5rem;
+    border-radius: 0.4rem;
 
     background-color: var(--bg-primary-color);
-    box-shadow: 0.1rem 0.1rem 0.08rem var(--link-hover-color);
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--link-primary-color);
 }
 
 .sub-menu > li {
@@ -197,7 +198,7 @@ a:hover {
 
 .header > :last-child {
     background-color: var(--bg-primary-color);
-    border: 0.2rem solid var(--link-hover-color);
+    border: 0.2rem solid var(--link-primary-color);
 
     position: fixed;
     width: 25vw;
@@ -249,6 +250,9 @@ a:hover {
 /* End Header */
 
 /*home*/
+article[class='content home'] > :not(:first-child) {
+    margin-top: 7vw;
+}
 .principal-logo {
     margin-left: 15vw;
     margin-right: 15vw;
@@ -275,8 +279,8 @@ a:hover {
 }
 
 .button:hover {
-    color: var(--text-primary-color);
-    background-color: var(--button-hover-color);
+    color: var(--bg-primary-color);
+    background-color: var(--text-primary-color);
 }
 
 .height-space > :last-child {
@@ -485,7 +489,7 @@ article[class='content faq'] > hr {
         height: 6vw;
         z-index: 1;
 
-        box-shadow: 0 0.1rem 0.2rem var(--link-hover-color);
+        box-shadow: 0 0.1rem 0.2rem var(--link-primary-color);
     }
 
     body > :nth-child(2) {
