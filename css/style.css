@@ -19,6 +19,7 @@
 
     --link-primary-color: #ff1100;
     --link-hover-color: #a90b00;
+    --button-hover-color: #a90b0018;
 }
 
 body {
@@ -202,8 +203,8 @@ a:hover {
     width: 25vw;
     height: 100vh;
     border-radius: 1.6rem;
-    padding: 5rem 3rem 0 3rem;
-    font-size: 1.5rem;
+    padding: 5vh 3vw 0 3vw;
+    line-height: 150%;
 
     text-align: right;
 
@@ -239,7 +240,6 @@ a:hover {
 }
 
 .header,
-
 .footer {
     display: flex;
     justify-content: space-around;
@@ -249,13 +249,10 @@ a:hover {
 /* End Header */
 
 /*home*/
-
-.height-space {
-    margin-top:35px;
-}
-
 .principal-logo {
-    margin: 100px;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 60vw;
 }
 
 .text-center {
@@ -263,60 +260,70 @@ a:hover {
 }
 
 .welcome-text {
-    padding-left: 30%;
-    padding-right: 30%;
+    text-align: center;
 }
 
 .button {
     border: 3px solid #000000;
-    width: 249px;
-    height: 39px;
     border-radius: 20px;
-    font-family: 'OpenDyslexic';
-    font-style: normal;
-    font-size: 15px;
     text-align: center;
     background: transparent;
-    cursor:pointer;
+    cursor: pointer;
+    padding: 0.4rem 0.8rem;
 
-    color: #000000;
+    color: var(--text-primary-color);
 }
 
-.button.home-objetivos{
-    margin-left:50px;
+.button:hover {
+    color: var(--text-primary-color);
+    background-color: var(--button-hover-color);
 }
 
-.fade-in-image { animation: fadeIn 1s; }
+.height-space > :last-child {
+    padding: 0;
+    margin: 2rem 0 1rem 0;
+    column-gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.fade-in-image {
+    animation: rotateAndFadeIn 0.2s;
+}
 
 .home-faq {
-    width: 100%;
+    width: 100vw;
     text-align: center;
-    padding: 4rem 0px 50px 0px;
+    padding: 0.1vh 0 1vh 0;
+    margin-top: 1rem;
     background-color: var(--bg-secondary-color);
 }
 
 .panel {
-    margin-top:20px;
     text-align: center;
-    width: 50%;
-    background: #D6D3C9;
+    background: var(--bg-secondary-color);
     border: 3px solid #000000;
     border-radius: 5px;
-    padding: 0px 20px 0px 20px;
-    margin-left:25%
+    margin: 1rem 15vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .panel-head {
-    cursor:pointer;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
 }
 
-#ajuda_guilda {
-  display: none;
-}
-
-.sign {
-    float:right;
-    font-size: 40px;
+.panel-head > :last-child {
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 /*end home*/
 /* Footer */
@@ -324,9 +331,10 @@ a:hover {
     margin-top: 1rem;
 
     background-color: var(--bg-secondary-color);
-    padding: 2.125rem 2vw;
-    display: flex;
-    column-gap: 1rem;
+    padding: 2.125rem 10vw;
+    display: grid;
+    grid-template-columns: 15.375rem 1fr;
+    column-gap: 7vw;
 
     text-transform: uppercase;
     text-decoration: none;
@@ -372,6 +380,19 @@ a:hover {
     width: 2.7rem;
     height: 2.7rem;
 }
+
+.footer > :last-child {
+    row-gap: 1rem;
+    column-gap: 3vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer > :last-child > a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 /* End Footer */
 
 /* FAQ */
@@ -394,7 +415,7 @@ div[class='ask-container'] {
 }
 
 .arrow {
-    height:30px;
+    height: 30px;
     width: 30px;
     float: right;
 }
@@ -434,10 +455,6 @@ article[class='content faq'] > hr {
 
     transition: transform 0.2s;
 }
-
-.answer > .img-rice {
-    margin-left: 25%;
-}
 /* End FAQ */
 
 .img-rice {
@@ -465,14 +482,14 @@ article[class='content faq'] > hr {
         position: fixed;
         background-color: var(--bg-primary-color);
         width: 100%;
-        height: 4vh;
+        height: 6vw;
         z-index: 1;
 
         box-shadow: 0 0.1rem 0.2rem var(--link-hover-color);
     }
 
-    .page-title {
-        margin-top: 5rem;
+    body > :nth-child(2) {
+        margin-top: 10vw;
     }
 
     .header > .menu {
@@ -481,35 +498,20 @@ article[class='content faq'] > hr {
 
     .logo > img {
         top: 0;
-        width: 10rem;
-        height: 5rem;
+        width: 100%;
+        height: 100%;
     }
 
     .sub-menu > :nth-child(2n) {
         margin-top: 1.8rem;
     }
 
-    .footer > :first-child {
-        grid-area: logo-footer;
-    }
-
-    .footer {
-        display: grid;
-        column-gap: 5vw;
-        font-size: 1.5rem;
-
-        grid-template-areas:
-            'logo-footer .'
-            'logo-footer .'
-            'logo-footer .';
-    }
-
-    .footer > :nth-child(3) {
-        margin: 1.8rem 0;
-    }
-
     .footer > :not(:first-child) {
-        row-gap: 1.7rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .welcome-text {
+        text-align: justify;
     }
 }
 /* End Mobile */
@@ -561,5 +563,62 @@ article[class='content faq'] > hr {
     }
 }
 /* End FadeIn */
+
+/* RotateAndFadeIn */
+@keyframes rotateAndFadeIn {
+    0% {
+        opacity: 0;
+        transform: rotate(0);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+}
+
+@-moz-keyframes rotateAndFadeIn {
+    0% {
+        opacity: 0;
+        transform: rotate(0);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+}
+
+@-webkit-keyframes rotateAndFadeIn {
+    0% {
+        opacity: 0;
+        transform: rotate(0);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+}
+
+@-o-keyframes rotateAndFadeIn {
+    0% {
+        opacity: 0;
+        transform: rotate(0);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+}
+
+@-ms-keyframes rotateAndFadeIn {
+    0% {
+        opacity: 0;
+        transform: rotate(0);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+}
+/* EndRotateAndFadeIn */
 
 /* End Animations */
