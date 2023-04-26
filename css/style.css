@@ -156,10 +156,6 @@ a:hover {
     margin: 1rem 0rem;
 }
 
-.header li:hover ul {
-    display: block;
-}
-
 .header li {
     list-style: none;
 }
@@ -250,9 +246,10 @@ a:hover {
 /* End Header */
 
 /*home*/
-article[class='content home'] > :not(:first-child) {
+article[class='content home'] > :nth-child(2) {
     margin-top: 7vw;
 }
+
 .principal-logo {
     margin-left: 15vw;
     margin-right: 15vw;
@@ -388,14 +385,28 @@ article[class='content home'] > :not(:first-child) {
 .footer > :last-child {
     row-gap: 1rem;
     column-gap: 3vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
 }
 
-.footer > :last-child > a {
+.footer > :last-child > span > p {
+    font-weight: bold;
+}
+
+.footer > :last-child > span > a {
     height: 100%;
     display: flex;
     align-items: center;
+    color: var(--text-primary-color);
+}
+
+.footer > :last-child > span > a:not(:first-child) {
+    margin-top: 0.6rem;
+}
+
+.footer > :last-child > span > a:hover {
+    color: var(--link-hover-color);
 }
 /* End Footer */
 

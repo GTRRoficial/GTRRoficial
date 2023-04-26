@@ -11,6 +11,7 @@ async function getHeader() {
     document.getElementsByClassName('hamburger')[0].addEventListener('click', showHideMenu);
     const menu_mobile = document.getElementsByClassName('menu-mobile')[0];
     menu_mobile.addEventListener('click', hideMenu);
+    setHoverToAccessibility();
 }
 
 async function getFooter() {
@@ -45,4 +46,31 @@ function showMenu() {
     menu?.style.setProperty('display', 'flex');
     document.querySelector(".header>:last-child")?.style.setProperty("display", "block");
     hamburger?.style.setProperty("transform", "rotate(-90deg)");
+}
+
+function setHoverToAccessibility() {
+    const menu = document.getElementsByClassName('menu')[0];
+    menu.querySelectorAll('.menu>li').forEach(li => {
+        const ul = li.querySelector('ul')
+        li?.addEventListener('keyup', () => {
+            ul?.setAttribute('aria-expanded', 'true');
+            ul?.setAttribute('aria-hidden', 'false');
+            ul?.style.setProperty('display', 'block');
+        });
+        li?.addEventListener('mouseover', () => {
+            ul?.setAttribute('aria-expanded', 'true');
+            ul?.setAttribute('aria-hidden', 'false');
+            ul?.style.setProperty('display', 'block');
+        });
+        li?.addEventListener('keydown', () => {
+            ul?.setAttribute('aria-hidden', 'true');
+            ul?.setAttribute('aria-expanded', 'false');
+            ul?.style.setProperty('display', 'none');
+        });
+        li?.addEventListener('mouseout', () => {
+            ul?.setAttribute('aria-hidden', 'true');
+            ul?.setAttribute('aria-expanded', 'false');
+            ul?.style.setProperty('display', 'none');
+        });
+    })
 }
